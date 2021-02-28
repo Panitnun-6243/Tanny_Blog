@@ -30,7 +30,17 @@
         <p><img class="imgIntro" src="./2972169.svg" /></p>
         <!--https://www.flaticon.com/svg/vstatic/svg/2972/2972169.svg?token=exp=1614363113~hmac=6ee7de70dbbd1e391572e00702b52ebb-->
         <h2>Panitnun Suvannabun</h2>
-        <p><q>We create this blog for Web-app development project CSC105</q></p>
+        <p id="str"></p>
+        <script>
+            var string = "\"We create this blog for Web-app development project CSC105\"";
+            var str = string.split("");
+            var el = document.getElementById('str');
+            (function animate() {
+                str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+                var running = setTimeout(animate, 90);
+            })();
+        </script>
+
     </div>
     <div class="content">
         <div class="dropdown">
@@ -45,7 +55,7 @@
 
         <script>
             /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                      toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                      toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
