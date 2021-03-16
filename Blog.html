@@ -32,7 +32,7 @@
         <h2>Panitnun Suvannabun</h2>
         <p id="str"></p>
         <script>
-            var string = "\"We create this blog for Web-app development project CSC105\"";
+            var string = "\"This blog is created for Web-app development project CSC105\"";
             var str = string.split("");
             var el = document.getElementById('str');
             (function animate() {
@@ -46,16 +46,16 @@
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Category</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#home">Technology</a>
-                <a href="#about">Sports</a>
-                <a href="#contact">Games</a>
+                <a href="Blog.html">Technology</a>
+                <a href="BlogSport.html">Sports</a>
+                <a href="BlogGame.html">Games</a>
             </div>
         </div>
         <br /><br />
 
         <script>
             /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                      toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
@@ -187,6 +187,12 @@
                 </article>
             </div>
         </div>
+    </div>
+
+    <div class="nextPage">
+
+        <a href="BlogSport.html" class="next">Next &raquo;</a>
+        <a href="#" class="previous">&laquo; Previous</a>
     </div>
     <footer>
         <p>&#169; 2021 Panitnun CS Blog's | Panitnun Suvannabun</p>
