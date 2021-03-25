@@ -1,223 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panitnun_Blog</title>
     <link rel="stylesheet" href="PanitnunBlog.css" />
-</head>
+  </head>
 
-<body>
-    <!-- Define Header Content -->
+  <body>
     <header>
-        <!-- Define Navigation section -->
-
-        <ul>
-            <li><a class="active" href="Blog.html">BLOG</a></li>
-            <li><a href="AboutUs.html">ABOUT US</a></li>
-            <li>
-                <a class="logo" href="Blog.html">Tanny blog's &#127891;<!--<img class="imgLogo" src="https://www.flaticon.com/svg/vstatic/svg/1187/1187544.svg?token=exp=1614361102~hmac=00137dbefe4ce849767add5ff10aac46">--></a
-          >
+      <ul>
+        <li><a class="active" href="Blog.html">BLOG</a></li>
+        <li><a href="AboutUs.html">ABOUT US</a></li>
+        <li>
+          <a class="logo" href="Blog.html">Tanny blog's &#127891;</a>
         </li>
         <li><a href="Register.html">REGISTER</a></li>
-            <li><a href="Login.html">LOGIN</a></li>
-        </ul>
+        <li><a href="Login.html">LOGIN</a></li>
+      </ul>
     </header>
     <div class="introWeb">
-        <input type="text" autocomplete="off" placeholder=" Search for content.." class="searchBox" /><br />
-        <p><img class="imgIntro" src="./2972169.svg" /></p>
-        <!--https://www.flaticon.com/svg/vstatic/svg/2972/2972169.svg?token=exp=1614363113~hmac=6ee7de70dbbd1e391572e00702b52ebb-->
-        <h2>Panitnun Suvannabun</h2>
-        <p id="str"></p>
-        <script>
-            var string = "\"This blog is created for Web-app development project CSC105\"";
-            var str = string.split("");
-            var el = document.getElementById('str');
-            (function animate() {
-                str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
-                var running = setTimeout(animate, 90);
-            })();
-        </script>
+      <input
+        type="text"
+        autocomplete="off"
+        placeholder=" Search for content.."
+        class="searchBox"
+      /><br />
+      <p><img class="imgIntro" src="./2972169.svg" /></p>
 
+      <h2>Panitnun Suvannabun</h2>
+      <p id="str"></p>
+      <script>
+        var string =
+          '"This blog is created for Web-app development project CSC105"';
+        var str = string.split("");
+        var el = document.getElementById("str");
+        (function animate() {
+          str.length > 0
+            ? (el.innerHTML += str.shift())
+            : clearTimeout(running);
+          var running = setTimeout(animate, 90);
+        })();
+      </script>
     </div>
     <div class="content">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Category</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="Blog.html">Technology</a>
-                <a href="BlogSport.html">Sports</a>
-                <a href="BlogGame.html">Games</a>
-            </div>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Category</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Blog.html">Technology</a>
+          <a href="BlogSport.html">Sports</a>
+          <a href="BlogGame.html">Games</a>
         </div>
-        <br /><br />
+      </div>
+      <br /><br />
 
-        <script>
-            /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
+      <script>
 
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-                if (!event.target.matches(".dropbtn")) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains("show")) {
-                            openDropdown.classList.remove("show");
-                        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches(".dropbtn")) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
                     }
                 }
-            };
-        </script>
-        <h1>&#127918; GAMES</h1>
-        <div class="site-container">
-            <div class="article-container">
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <figure class="article-image">
-                        <img src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1" />
-                    </figure>
-                    <div class="article-content">
-                        <a href="#" class="card-category">Travel</a>
-                        <h3 class="card-title">Trip Planning for total beginner</h3>
-                        <p class="card-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </article>
+            }
+        };
+      </script>
+      <h1>&#127918; GAMES</h1>
+      <div class="site-container">
+        <div class="article-container">
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
             </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/228/097/non_2x/bitcoin-cryptocurrency-in-futuristic-graphic-vector.jpg"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
+          <article class="article-card">
+            <figure class="article-image">
+              <img
+                src="https://elements-cover-images-0.imgix.net/2cebaad4-5690-439e-b7cd-b2dccfe7bb80?auto=compress%2Cformat&fit=max&w=2740&s=7156b2b4a1d35dbac53416a3136519b1"
+              />
+            </figure>
+            <div class="article-content">
+              <a href="#" class="card-category">Travel</a>
+              <h3 class="card-title">Trip Planning for total beginner</h3>
+              <p class="card-excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </article>
         </div>
+      </div>
     </div>
 
     <div class="nextPage">
-        <a href="BlogSport.html" class="previous">&laquo; Previous</a>
-        <!--<a href="#" class="next">Next &raquo;</a>-->
-
+      <a href="BlogSport.html" class="previous">&laquo; Previous</a>
     </div>
     <footer>
-        <p>&#169; 2021 Panitnun CS Blog's | Panitnun Suvannabun</p>
+      <p>&#169; 2021 Panitnun CS Blog's | Panitnun Suvannabun</p>
     </footer>
-    <!-- Define Intro Content 
-    -->
-
-    <!-- Define Article section 
-    <div id="article">
-        <div class="content">
-            <h1>Article</h1>
-            <h3>Panitnun Suvannabun CS 63130500235 </h3><br>
-
-
-        </div>
-    </div>
-
--->
-
-    <!-- Define Footer Content 
-    <div id="footer">
-        <h2>Footer</h2>
-        <iframe src="http://demos.9lessons.info/counter.html" frameborder="0" scrolling="no" height="0"></iframe>
-    </div>
--->
-</body>
-
+  </body>
 </html>
