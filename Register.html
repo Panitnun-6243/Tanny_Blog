@@ -2,51 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panitnun_Blog</title>
-    <link rel="stylesheet" href="PanitnunBlog.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Panitnun_Blog</title>
+	<link rel="stylesheet" href="PanitnunBlog.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		*:focus {
+			outline: none;
+		}
+
+		input[type=text]::placeholder {
+			color: #cccccc;
+			opacity: 0.8;
+		}
+	</style>
 </head>
 
 <body>
-    <!-- Define Header Content -->
-    <header>
+	
+	<header>
 
-        <!-- Define Navigation section -->
+		
+		<ul>
+			<li><a href="Blog.html">BLOG</a></li>
+			<li><a href="AboutUs.html">ABOUT US</a></li>
+			<li><a class="logo" href="Blog.html">Tanny's blog &#127891</a></li>
+			<li><a class="active" href="Register.html">REGISTER</a></li>
+			<li><a href="Login.html">LOGIN</a></li>
+		</ul>
+	</header>
+	<div class="introWebRegister">
+		<div class="wrapper fadeInDown" style="align-items: center;">
+			<div id="formContent">
+				<!-- Tabs Titles -->
+				<div id="sec1">
+					<h3 class="active"> Create Account</h3>
+					<!-- Icon -->
+					<div class="fadeIn first">
+						<img src="family.svg" id="iconLogIn" />
+					</div>
 
-        <ul>
-            <li><a href="Blog.html">BLOG</a></li>
-            <li><a href="AboutUs.html">ABOUT US</a></li>
-            <li><a class="logo" href="Blog.html">Tanny blog's &#127891</a></li>
-            <li><a class="active" href="Register.html">REGISTER</a></li>
-            <li><a href="Login.html">LOGIN</a></li>
-        </ul>
-    </header>
+					<!-- Login Form -->
+					<form id="Form1">
+						<input type="text" id="email" class="fadeIn second logInText" name="login" placeholder="Email">
+						<input type="text" id="password" class="fadeIn third logInText" name="login"
+							placeholder="Password">
+						<input type="text" id="ConfirmPassword" class="fadeIn third logInText" name="login"
+							placeholder="Confirm Password">
+						<input type="button" class="fadeIn fourth" value="Next" onclick="toggleSlide(2)">
+					</form>
+				</div>
+				<!--2-->
+				<div id="sec2">
+					<h3 class="active"> Social Profiles</h3>
+					<!-- Icon -->
+					<div class="fadeIn first">
+						<img src="family.svg" id="iconLogIn" />
+					</div>
 
-    <!-- Define Main Content -->
+					<!-- Login Form -->
+					<form id="Form2">
+						<input type="text" id="line" class="fadeIn second logInText" name="login" placeholder="Line">
+						<input type="text" id="facebook" class="fadeIn third logInText" name="login"
+							placeholder="Facebook">
+						<input type="text" id="instagram" class="fadeIn third logInText" name="login"
+							placeholder="Instagram">
+                            <div style="display:flex;">
+						<input type="button" class="fadeIn fourth" value="Previous" onclick="toggleSlide(1)">
+						<input type="button" class="fadeIn fourth" value="Next" onclick="toggleSlide(3)"></div>
+					</form>
+				</div>
+				<!--3-->
+				<div id="sec3">
+					<h3 class="active"> Personal Details</h3>
+					<!-- Icon -->
+					<div class="fadeIn first">
+						<img src="family.svg" id="iconLogIn" />
+					</div>
 
+					<!-- Login Form -->
+					<form id="Form3">
+						<input type="text" id="firstName" class="fadeIn second logInText" name="login"
+							placeholder="First Name">
+						<input type="text" id="lastName" class="fadeIn third logInText" name="login"
+							placeholder="Last Name">
+						<input type="text" id="Phone" class="fadeIn third logInText" name="login" placeholder="Phone">
+                        <div style="display:flex;">
+						<input type="button" class="fadeIn fourth" value="Previous" onclick="toggleSlide(2)">
+						<input type="button" class="fadeIn fourth" value="Submit"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Define Article section 
-    <div id="article">
-        <div class="content">
-            <h1>Article</h1>
-            <h3>Panitnun Suvannabun CS 63130500235 </h3><br>
+	<footer class="logInPage">
+		<p>&#169; 2021 Panitnun CS Blog's | Panitnun Suvannabun</p>
+	</footer>
 
-
-        </div>
-    </div>
-
--->
-
-
-    <!-- Define Footer Content 
-    <div id="footer">
-        <h2>Footer</h2>
-        <iframe src="http://demos.9lessons.info/counter.html" frameborder="0" scrolling="no" height="0"></iframe>
-    </div>
--->
-
+	<script>
+		const toggleSlide = (tab) => {
+			if (tab == 1) {
+				document.getElementById('sec1').style.display = 'inherit';
+			} else {
+				document.getElementById('sec1').style.display = 'none';
+			}
+			if (tab == 2) {
+				document.getElementById('sec2').style.display = 'inherit';
+			} else {
+				document.getElementById('sec2').style.display = 'none';
+			}
+			if (tab == 3) {
+				document.getElementById('sec3').style.display = 'inherit';
+			} else {
+				document.getElementById('sec3').style.display = 'none';
+			}
+		}
+		toggleSlide(1)
+	</script>
 </body>
 
 </html>
