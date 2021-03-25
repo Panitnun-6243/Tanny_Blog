@@ -7,46 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panitnun_Blog</title>
     <link rel="stylesheet" href="PanitnunBlog.css">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+} 
+input[type=text]::placeholder{
+    color: #cccccc;
+    opacity: 0.8;
+  }
+    </style>
 </head>
 
 <body>
-    <!-- Define Header Content -->
+    
     <header>
 
-        <!-- Define Navigation section -->
+        
 
         <ul>
             <li><a href="Blog.html">BLOG</a></li>
             <li><a href="AboutUs.html">ABOUT US</a></li>
-            <li><a class="logo" href="Blog.html">Tanny blog's &#127891</a></li>
+            <li><a class="logo" href="Blog.html">Tanny's blog &#127891</a></li>
             <li><a href="Register.html">REGISTER</a></li>
             <li><a class="active" href="Login.html">LOGIN</a></li>
         </ul>
     </header>
-
-    <!-- Define Main Content -->
-
-
-    <!-- Define Article section 
-    <div id="article">
-        <div class="content">
-            <h1>Article</h1>
-            <h3>Panitnun Suvannabun CS 63130500235 </h3><br>
-
-
+    <div class="introWebLogin">
+        <div><img class="imgShield" src="shield.svg"></div>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                
+                <h3 class="active"> Sign In </h3>
+    
+    
+                
+                <div class="fadeIn first">
+                    <img src="key.svg" id="iconLogIn"  />
+                </div>
+    
+                
+                <form>
+                    <input type="text" id="login" class="fadeIn second logInText" name="login" placeholder="Login">
+                    <input type="text" id="password" class="fadeIn third logInText" name="login" placeholder="Password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+    
+                
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
+    
+            </div>
         </div>
     </div>
 
--->
-
-
-    <!-- Define Footer Content 
-    <div id="footer">
-        <h2>Footer</h2>
-        <iframe src="http://demos.9lessons.info/counter.html" frameborder="0" scrolling="no" height="0"></iframe>
-    </div>
--->
     
+    <footer class="logInPage">
+        <p>&#169; 2021 Panitnun CS Blog's | Panitnun Suvannabun</p>
+    </footer>
+   
 </body>
 
 </html>
